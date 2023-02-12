@@ -67,7 +67,11 @@ img {
     }
       }
   
-
+      .header-container{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
 
 
 
@@ -169,6 +173,11 @@ body {
   background-color: var(--white-one);
 }
 
+
+
+
+
+
 /* ---------HEADER - MOBILE----------- */
 @media screen and (max-width: 767px) {
   
@@ -183,14 +192,23 @@ display: none;
   padding-top: 24px;
   padding-bottom: 24px;
 }
-}
-.header-container{
+
+
+.nav-logo {
+  font-family: "Raleway";
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 1.33;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--bodi-title-color);
+  transition: color var(--transition);
 }
-
-/*------------ HEDER-MOBILE-MENU-------------- */
+.accent {
+  color: var(--hover-focus-color);
+}
 .mobile-menu-open{
   background-color: transparent;
   border: none;
@@ -205,12 +223,23 @@ display: none;
   left: 0;
   background: #FFFFFF;
   box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  
 }
+
+.mobile-menu.is-open{
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transition: opacity 500ms linear, visibility 500ms linear  ;
+  }
+
 
 .mobile-menu-container{
   position: relative;
   padding-top: 80px;
-  padding-bottom: 40px;
   padding-left: 40px;
 
 }
@@ -307,72 +336,102 @@ transition: color var(--transition);
 .soc-link-mobile-menu:focus{
 background-color: var(--blue-two);
 }
-
-/* --------------HEADER-NORMAL-------- */
-
-/* .header {
-  padding-top: 24px;
-  padding-bottom: 24px;
 }
+/* ------------HEADER-TABLET----------- */
+@media screen and (min-width: 768px) {
+  .mobile-menu{
+    display: none;
+  }
+  .mobile-menu-open{
+    display: none;
+  }
+  .header {
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+  .header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .nav {
+    display: flex;
+    align-items: center;
+  }
+  .nav-list {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+  }
+  .nav-logo {
+    margin-right: 120px;
+  }
+  .nav-logo {
+    font-family: "Raleway";
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 1.33;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--bodi-title-color);
+    transition: color var(--transition);
+  }
+  .accent {
+    color: var(--hover-focus-color);
+  }
+  .nav-link {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: var(--bodi-title-color);
+    transition: color var(--transition);
+  }
+  .current {
+    color: var(--blue-two);
+    position: relative;
+  }
+  .current::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -37px;
+    width: 100%;
+    height: 4px;
+    background-color: var(--blue-two);
+    border-radius: 2px;
+  }
+    .addres-item:not(:last-child) {
+    margin-bottom: 4px;
+  }
+  .contact-link-number,
+  .contact-link-mail {
+    font-size: 12px;
+    line-height: 1.33;
+    letter-spacing: 0.04em;
+    color: var(--grey-one);
+    font-style: normal;
+    transition: color var(--transition);
+  }
+
+}
+
+/* --------------HEADER-DEXTOP-------- */
+@media screen and (min-width: 1200px) {
+  
 .header-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-
-.nav {
-  display: flex;
-  align-items: center;
-}
-.nav-list {
-  display: flex;
-  align-items: center;
-  gap: 40px;
+.current::after{
+  bottom: -28px; 
 }
 .nav-logo {
   margin-right: 76px;
-}
-.nav-logo {
-  font-family: "Raleway";
-  font-weight: 800;
-  font-size: 18px;
-  line-height: 1.33;
-  display: flex;
-  align-items: center;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-  color: var(--bodi-title-color);
-  transition: color var(--transition);
-}
-.accent {
-  color: var(--hover-focus-color);
-}
-.nav-link {
-  font-weight: 500;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
-  color: var(--bodi-title-color);
-  transition: color var(--transition);
-}
-
-.current {
-  color: var(--blue-two);
-  position: relative;
-}
-.current::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -28px;
-  width: 100%;
-  height: 4px;
-  background-color: var(--blue-two);
-  border-radius: 2px;
-} */
-/*------------ ADDRES------------ */
-/* .addres {
-  display: flex;
-  align-items: center;
 }
 .addres-list {
   display: flex;
@@ -392,24 +451,53 @@ background-color: var(--blue-two);
   color: var(--body-text-color);
   font-style: normal;
   transition: color var(--transition);
+} 
 }
-.addres-icon {
-  fill: var(--body-text-color);
-}
-.contact-link-number:is(:hover, :focus) .addres-icon {
-  fill: var(--blue-two);
-}
-.contact-link-mail:is(:hover, :focus) .addres-icon {
-  fill: var(--blue-two);
-} */
 /* --------MAIN------------ */
-/* --------HERO------------ */
+
+/* ------HERO-MOBILE--------- */
+@media screen and (max-width: 767px) {
 .hero {
-  padding-top: 188px;
-  padding-bottom: 188px;
+  padding-top: 112px;
+  padding-bottom: 112px;
   background: var(--background-hero-footer-color);
-  background-image: var(--gradient-one), url(../images/people-office.jpg);
-  max-width: 1440px;
+  background-image: var(--gradient-one), url(../images/mobiles/hero-image-mobile1x-min.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0 auto;
+  max-width: 428px;
+}
+.hero-title {
+  max-width: 320px;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.11;
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: var(--white-one);
+  margin: 0 auto;
+  margin-bottom: 72px;
+}
+.hero-btn {
+  border: none;
+  padding: 16px 32px;
+  background: var(--btn-color);
+  color: var(--btn-text-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  margin: 0 auto;
+  transition: background-color var(--transition);
+}
+}
+
+/* -----------HERO-TABLET---------------- */
+@media screen and (min-width: 768px) {
+.hero {
+  padding-top: 112px;
+  padding-bottom: 108px;
+  background: var(--background-hero-footer-color);
+  background-image: var(--gradient-one), url(../images/tablet/hero-tablet1x-min.jpg);
+  max-width: 768px;
   background-repeat: no-repeat;
   background-size: cover;
   margin: 0 auto;
@@ -422,7 +510,7 @@ background-color: var(--blue-two);
   letter-spacing: 0.02em;
   color: var(--white-one);
   margin: 0 auto;
-  margin-bottom: 48px;
+  margin-bottom: 40px;
 }
 .hero-btn {
   border: none;
@@ -434,10 +522,86 @@ background-color: var(--blue-two);
   margin: 0 auto;
   transition: background-color var(--transition);
 }
-/* --------ABOUT---------- */
-.about-list {
+}
+
+/* --------HERO-DEXTOP------------ */
+.hero {
+  padding-top: 188px;
+  padding-bottom: 188px;
+  background-image: var(--gradient-one), url(../images/dextop/hero-image-dextop1x-min.jpg);
+  max-width: 1440px;
+}
+.hero-title {
+  max-width: 510px;
+  margin-bottom: 48px;
+}
+/* ------------ABOUT-MOBILE--------- */
+@media screen and (max-width: 767px) {
+.about-item-svg{
+  display: none;
+}
+.about{
+  padding-top: 96px;
+  padding-bottom: 96px;
+
+}
+.about-subtitle{
+  font-weight: 700;
+font-size: 36px;
+line-height: 1.11;
+text-align: center;
+letter-spacing: 0.02em;
+color: var(--grey-two);
+margin-bottom: 8px;
+}
+.about-text{
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: var(--grey-one);
+  
+  }
+  .about-item:not( :last-child ) {
+    margin-bottom: 72px;
+  }
+}
+
+/* -------ABOUT_TABLET---------- */
+@media screen and (min-width: 768px){
+  .about-item-svg{
+    display: none;
+  }
+  .about-list {
   display: flex;
-  gap: 24px;
+  flex-wrap: wrap;
+  row-gap: 72px ;
+  column-gap: 24px;
+  }
+  .about-item {
+  width: calc((100% -  24px) / 2);
+  }
+  .about-subtitle{
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.11;
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: var(--grey-two);
+  margin-bottom: 8px;
+  }
+  .about-text{
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: var(--grey-one);
+  } 
+}
+/* --------ABOUT-DEXTOP--------- */
+@media screen and (min-width: 1200px){
+.about-list {
+    gap: 24px;
 }
 .about-item {
   width: calc((100% - 3 * 24px) / 4);
@@ -451,8 +615,38 @@ background-color: var(--blue-two);
   background: var(--white-two);
   border-radius: 4px;
   margin-bottom: 8px;
+} 
+.about-subtitle{
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  margin-bottom: 8px;
+  }
+  .about-text{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    } 
 }
+
+/* -----DOING-MOMILE------- */
+@media screen and (max-width: 767px){
+ .doing{
+  display: none;
+ } 
+
+}
+
+/* -----DOING-TITLE------- */
+@media screen and (min-width: 768px) and (max-width: 1199px){
+  .doing{
+    display: none;
+  } 
+  }
 /* --------DOING---------- */
+@media screen and (min-width: 1200px){
 .doing {
   padding-top: 0;
 }
@@ -463,6 +657,7 @@ background-color: var(--blue-two);
 }
 .doing-item {
   flex-basis: calc((100% - 2 * 24px) / 3);
+}
 }
 /* --------TEAM----------- */
 .team {
@@ -878,4 +1073,31 @@ display: flex;
   transition: background-color var(--transition);
 }
 
+@media screen and (min-device-pixel-ratio: 2) and (max-width:767px),
+screen and (min-resolution: 192dpi) and (max-width:767px),
+screen and (min-resolution: 2dppx) and (max-width:767px)
+{
+  .hero {
+    background-image: var(--gradient-one), url(../images/mobiles/hero-image-mobile2x-min.jpg);
+  }
+  
+}
+@media screen and (min-device-pixel-ratio: 2) and (min-width:768px),
+screen and (min-resolution: 192dpi) and (min-width:768px),
+screen and (min-resolution: 2dppx) and (min-width:768px)
+{
+  .hero{
+    background-image: var(--gradient-one), url(../images/tablet/hero-tablet2x-min.jpg);
+  }
+  
+}
 
+@media screen and (min-device-pixel-ratio: 2) and (min-width:1200px),
+screen and (min-resolution: 192dpi) and (min-width:1200px),
+screen and (min-resolution: 2dppx) and (min-width:1200px)
+{
+  .hero{
+    background-image: var(--gradient-one), url(../images/dextop/hero-image-dextop2x-min.jpg);
+  }
+  
+}
