@@ -18,7 +18,7 @@
     <title>Web Studio</title>
   </head>
   <body>
-    <!-- <header class="header border">
+    <header class="header border">
       <div class="container header-container">
         <nav class="nav">
           <a href="./index.html" class="nav-logo link"
@@ -36,6 +36,11 @@
             </li>
           </ul>
         </nav>
+        <button type="button" class="mobile-menu-open">
+          <svg class="mobile-menu-open-ico" width="32" height="22">
+            <use href="./images/icons.svg#icon-menu-burger"></use>
+          </svg>
+        </button>
         <address class="addres">
           <ul class="addres-list list">
             <li class="addres-item">
@@ -54,7 +59,76 @@
           </ul>
         </address>
       </div>
-    </header> -->
+      <div class="mobile-menu">
+        <div class="mobile-menu-container container">
+          <button type="button" class="mobile-menu-close-btn">
+          <svg class="mobile-menu-close-ico" width="8" height="8">
+            <use href="./images/icons.svg#icon-close-black"></use>
+          </svg>
+        </button>
+        <nav class="nav-mobile-menu ">
+           <ul class="nav-list-mobile-menu list">
+            <li class="nav-item-mobile-menu">
+              <a href="./index.html" class="nav-link-mobile-menu link current">Studio</a>
+            </li>
+            <li class="nav-item-mobile-menu">
+              <a href="./portfolio.html" class="nav-link-mobile-menu link">Portfolio</a>
+            </li>
+            <li class="nav-item-mobile-menu">
+              <a href="" class="nav-link-mobile-menu link">Contacts</a>
+            </li>
+          </ul>
+        </nav>
+           <address class="addres-mobile-menu">
+          <ul class="addres-list-mobile-menu list">
+            <li class="addres-item-mobile-menu">
+              <a href="tel:+110001111111" class="contact-link-number-mobile-menu list link">
+                +11 (000) 111-11-11</a
+              >
+            </li>
+            <li class="addres-item-mobile-menu">
+              <a
+                href="mailto:info@devstudio.com"
+                class="contact-link-mail-mobile-menu link"
+              >
+                info@devstudio.com</a
+              >
+            </li>
+            </ul>
+        </address>
+        <ul class="soc-list-mobile-menu list">
+            <li class="soc-item-mobile-menu">
+              <a href="" class="soc-link-mobile-menu link">
+                <svg class="soc-ico-mobile-menu" width="24px" height="24px">
+                  <use href="./images/icons.svg#icon-instagram-2"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="soc-item-mobile-menu">
+              <a href="" class="soc-link-mobile-menu link">
+                <svg class="soc-ico-mobile-menu" width="24px" height="24px">
+                  <use href="./images/icons.svg#icon-twitter-1"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="soc-item-mobile-menu">
+              <a href="" class="soc-link-mobile-menu link">
+                <svg class="soc-ico-mobile-menu" width="24px" height="24px">
+                  <use href="./images/icons.svg#icon-facebook-1"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="soc-item-mobile-menu">
+              <a href="" class="soc-link-mobile-menu link">
+                <svg class="soc-ico-mobile-menu" width="24px" height="24px">
+                  <use href="./images/icons.svg#icon-linkedin-1"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
     <main class="main">
       <!-- <section class="hero section section">
         <div class="container">
@@ -150,7 +224,7 @@
           </ul>
         </div>
       </section> -->
-      <section class="team section">
+      <!-- <section class="team section">
         <div class="container">
           <h2 class="team-title section-title">Our Team</h2>
           <ul class="team-list list">
@@ -325,7 +399,7 @@
             </li>
           </ul>
         </div>
-      </section>
+      </section> -->
       <!-- <section class="customers section">
         <div class="customers-container container">
           <h2 class="customers-title section-title">Customers</h2>
