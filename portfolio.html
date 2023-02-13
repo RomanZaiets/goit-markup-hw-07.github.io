@@ -26,19 +26,17 @@
             >
             <ul class="nav-list list">
               <li class="nav-item">
-                <a href="./index.html" class="nav-link link">Studio</a>
+                <a href="./index.html" class="nav-link link current">Studio</a>
               </li>
               <li class="nav-item">
-                <a href="./portfolio.html" class="nav-link link current"
-                  >Portfolio</a
-                >
+                <a href="./portfolio.html" class="nav-link link">Portfolio</a>
               </li>
               <li class="nav-item">
                 <a href="" class="nav-link link">Contacts</a>
               </li>
             </ul>
           </nav>
-          <address class="addres">
+              <address class="addres">
             <ul class="addres-list list">
               <li class="addres-item">
                 <a
@@ -49,15 +47,86 @@
                 >
               </li>
               <li class="addres-item">
-                <a
-                  href="tel:+110001111111"
-                  class="contact-link-number list link"
-                >
+                <a href="tel:+110001111111" class="contact-link-number list link">
                   +11 (000) 111-11-11</a
                 >
               </li>
             </ul>
           </address>
+          <button type="button" class="mobile-menu-open js-open-menu" >
+            <svg class="mobile-menu-open-ico" width="32" height="22">
+              <use href="./images/icons.svg#icon-menu-burger"></use>
+            </svg>
+          </button>
+        </div>
+        <div class="mobile-menu js-menu-container">
+          <div class="mobile-menu-container container">
+            <button type="button" class="mobile-menu-close-btn js-close-menu" >
+            <svg class="mobile-menu-close-ico" width="8" height="8">
+              <use href="./images/icons.svg#icon-close-black"></use>
+            </svg>
+          </button>
+          <nav class="nav-mobile-menu ">
+             <ul class="nav-list-mobile-menu list">
+              <li class="nav-item-mobile-menu">
+                <a href="./index.html" class="nav-link-mobile-menu link current">Studio</a>
+              </li>
+              <li class="nav-item-mobile-menu">
+                <a href="./portfolio.html" class="nav-link-mobile-menu link">Portfolio</a>
+              </li>
+              <li class="nav-item-mobile-menu">
+                <a href="" class="nav-link-mobile-menu link">Contacts</a>
+              </li>
+            </ul>
+          </nav>
+             <address class="addres-mobile-menu">
+            <ul class="addres-list-mobile-menu list">
+              <li class="addres-item-mobile-menu">
+                <a href="tel:+110001111111" class="contact-link-number-mobile-menu list link">
+                  +11 (000) 111-11-11</a
+                >
+              </li>
+              <li class="addres-item-mobile-menu">
+                <a
+                  href="mailto:info@devstudio.com"
+                  class="contact-link-mail-mobile-menu link"
+                >
+                  info@devstudio.com</a
+                >
+              </li>
+              </ul>
+          </address>
+          <ul class="soc-list-mobile-menu list">
+              <li class="soc-item-mobile-menu">
+                <a href="" class="soc-link-mobile-menu link">
+                  <svg class="soc-ico-mobile-menu" width="24px" height="24px">
+                    <use href="./images/icons.svg#icon-instagram-2"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="soc-item-mobile-menu">
+                <a href="" class="soc-link-mobile-menu link">
+                  <svg class="soc-ico-mobile-menu" width="24px" height="24px">
+                    <use href="./images/icons.svg#icon-twitter-1"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="soc-item-mobile-menu">
+                <a href="" class="soc-link-mobile-menu link">
+                  <svg class="soc-ico-mobile-menu" width="24px" height="24px">
+                    <use href="./images/icons.svg#icon-facebook-1"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="soc-item-mobile-menu">
+                <a href="" class="soc-link-mobile-menu link">
+                  <svg class="soc-ico-mobile-menu" width="24px" height="24px">
+                    <use href="./images/icons.svg#icon-linkedin-1"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
       </header>
       <main>
@@ -305,6 +374,7 @@
       </main>
       <footer class="footer">
         <div class="footer-container container">
+          <div class="footer-wrap">
           <div class="footer-logo-wrap">
             <a href="./index.html" class="footer-logo link"
               ><span class="accent">Web</span>Studio</a
@@ -347,24 +417,23 @@
               </li>
             </ul>
           </div>
+        </div>
           <div class="futer-inpur-container">
             <p class="footer-text-soc sction-text">Subscribe</p>
-            <div class="futer-inpur-container">
             <form class="footer-form" >
               <label for="email-footer"></label>
-              <div class="footer-input-wrap">
-                <input type="email"
-                id="email-footer"
-                name="email"
-                class="footer-mail-input" placeholder="E-mail">
-                <button type="submit" class="footer-btn-input button"><span class="futer-text-btn">Subscribe</span><svg class="footer-btn-ico" width="24" height="24">
-                  <use href="./images/icons.svg#icon-icon-send"></use>
-                </svg></button>
-              </div>
-            </form>
+            <div class="footer-input-wrap ">
+              <input type="email"
+              id="email-footer"
+              name="email"
+              class="footer-mail-input" placeholder="E-mail">
+              <button type="submit" class="footer-btn-input button"><span class="futer-text-btn">Subscribe</span><svg class="footer-btn-ico" width="24" height="24">
+                <use href="./images/icons.svg#icon-icon-send"></use>
+              </svg></button>
             </div>
+          </form>
           </div>
         </div>
-      </footer>
+      </footer> 
     </body>
 </html>
