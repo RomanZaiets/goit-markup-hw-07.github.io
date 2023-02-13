@@ -751,8 +751,94 @@ margin-bottom: 8px;
   width: calc((100% - 5 * 24px) / 6);
 }
 }
+
+
+/* ---PORTFOLIO-MOBILE------- */
+@media screen and (min-width: 320px){
+
+  .portfolio {
+    padding-top: 48px;
+    padding-bottom: 48px;
+
+    
+  }
+  .portfolio-list-btn {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 16px;
+    column-gap: 24px;
+    margin-bottom:48px;
+  }
+  .portfolio-btn {
+    padding: 12px 24px;
+    background: var(--white-two);
+    color: var(--btn-color);
+    border: 1px solid var(--white-three);
+    border-radius: 4px;
+    transition: color var(--transition), background-color var(--transition),
+    box-shadow var(--transition);
+  }
+  .portfolio-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 48px;
+  }
+  img{
+    width: 100%;
+  }
+  .portfolio-item-wrap {
+    padding-top: 32px;
+    padding-bottom: 32px;
+    padding-left: 16px;
+    border-top: none;
+  }
+  .portfolio-item{
+    width: 100%;
+  }
+  .portfolio-link:is(:hover, :focus) .portfolio-top-text {
+    transform: translateY(0%);
+  }
+  .portfolio-link {
+    display: block;
+    transition: box-shadow var(--transition);
+  }
+  .portfolio-link:is(:hover, :focus) {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+  .portfolio-subtitle {
+    color: var(--grey-two);
+  }
+  .portfolio-top-wrap {
+    position: relative;
+    overflow: hidden;
+  }
+  .portfolio-top-text {
+    position: absolute;
+    top: 0;
+    color: var(--white-two);
+    background-color: var(--blue-one);
+    padding-top: 40px;
+    padding-left: 32px;
+    padding-right: 32px;
+    height: 100%;
+    transform: translateY(100%);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+
+
+/* --------------PORTFOLIO-TABLET----------- */
+@media screen and (min-width: 768px){
+
+}
 /* -----PORTFOLIO--------- */
-.portfolio {
+@media screen and (min-width: 1200px){
+
+
+
+}
+/* .portfolio {
   padding-top: 96px;
 }
 .portfolio-list {
@@ -815,7 +901,7 @@ margin-bottom: 8px;
   height: 100%;
   transform: translateY(100%);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
+} */
 /* --FOOTER-MOBILE------- */
 @media screen and (min-width: 320px){
   .footer {
