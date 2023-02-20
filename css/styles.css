@@ -194,12 +194,15 @@ display: none;
 .addres{
   display: none;
 }
+.header{
+  
+  padding-bottom: 24px;
+}
 }
 @media screen and (min-width: 320px){
 .header{
   padding-top: 24px;
-  padding-bottom: 24px;
-}
+ }
 .nav-logo {
   font-family: "Raleway";
   font-weight: 800;
@@ -375,7 +378,7 @@ background-color: var(--blue-two);
 }
 
 /* ------------HEADER-TABLET----------- */
-@media screen and (max-width: 1199px) {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
 .header{
    padding-bottom: 22px;
 }
@@ -445,14 +448,13 @@ background-color: var(--blue-two);
 
 /* --------------HEADER-DEXTOP-------- */
 @media screen and (min-width: 1200px) {
-  
+  .header{
+    padding-bottom: 28px;
+  }
 .header-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
-}
-.current::after{
-  bottom: -30px; 
 }
 .nav-logo {
   margin-right: 76px;
@@ -598,12 +600,9 @@ margin-bottom: 8px;
 }
 /* -------ABOUT_TABLET---------- */
 @media screen and (min-width: 768px){
-  /* .about-list {
-  display: flex;
-  flex-wrap: wrap;
-  row-gap: 72px ;
-  column-gap: 24px;
-  } */
+  .about-list {
+   column-gap: 24px;
+  } 
   .about-item {
   width: calc((100% -  24px) / 2);
   }
@@ -741,6 +740,10 @@ margin-bottom: 8px;
 }
 /* --------TEAM-DEXTOP---------- */
 @media screen and (min-width: 1200px){
+  .team{
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
 .team-list {
   gap: 24px;
 }
