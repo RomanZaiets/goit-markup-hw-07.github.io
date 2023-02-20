@@ -39,27 +39,28 @@ img {
 }  
 
 .container {
+  max-width: 428px;
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
   }
 
 
-@media screen and (max-width: 768px) {
+/* @media screen and (max-width: 768px) {
   .container{
-max-width: 428px;
+
   }
-  }
+  } */
 
   @media screen and (min-width: 768px) {
     .container{
-    width: 768px;
+    max-width: 768px;
      }
     }
 
     @media screen and (min-width: 1200px) {
       .container{
-      width: 1158px;
+      max-width: 1158px;
          }
       }
   
@@ -484,8 +485,7 @@ background-color: var(--blue-two);
  
 }
 .hero-title {
-  /* max-width: 280px; */
-  font-weight: 700;
+   font-weight: 700;
   font-size: 36px;
   line-height: 1.11;
   text-align: center;
@@ -517,7 +517,7 @@ background-color: var(--blue-two);
 .hero {
    padding-bottom: 108px;
    background-image: var(--gradient-one), url(../images/tablet/hero-tablet1x-min.jpg);
-  /* max-width: 768px; */
+ 
 }
 .hero-title {
   max-width: 510px;
@@ -533,7 +533,7 @@ background-color: var(--blue-two);
   padding-top: 188px;
   padding-bottom: 188px;
   background-image: var(--gradient-one), url(../images/dextop/hero-image-dextop1x-min.jpg);
-  /* max-width: 1440px; */
+  max-width: 1440px;
 }
 .hero-title {
   max-width: 510px;
